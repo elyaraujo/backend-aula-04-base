@@ -1,6 +1,6 @@
 import pkg from 'mongoose';
 const { connect, connection,disconnect } = pkg;
-const uri = "mongodb+srv://chrisleearaujo:l5XmLMJIFvX8RbsQ@cluster0.zsno3yi.mongodb.net/DataBase?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGO_DB_URL;
 
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
